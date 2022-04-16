@@ -12,6 +12,15 @@ import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import BuildoutLogo from '../BuildoutLogo.svg';
+import userPhoto from '../userPhoto.png';
+import Barbell from '../Barbell.svg';
+import Exercise from '../Exercise.svg';
+import home from '../home.svg';
+import schedule from '../schedule.svg';
+import settings from '../settings.svg';
+import ListItemIcon from "@mui/material/ListItemIcon";
+
 
 
 function ProfilePage() {
@@ -28,21 +37,21 @@ function ProfilePage() {
         <CssBaseline />
         <AppBar
           position="fixed"
-          sx={{ width: `calc(100% - 150px)`, ml: `100vh`}}
+          sx={{ width: `calc(100% - 200px)`, ml: `100vh`}}
           style={{ background: '#9BB1FF' }}
         >
           <Toolbar>
-            <Typography variant="h6" noWrap component="div">
-              Welcome, Isabelle
+            <Typography variant="h3" noWrap component="div">
+              Welcome Back!
             </Typography>
           </Toolbar>
         </AppBar>
         <Drawer
           sx={{
-            width: '150px',
+            width: '200px',
             flexShrink: 0,
             "& .MuiDrawer-paper": {
-              width: '150px',
+              width: '200px',
               boxSizing: "border-box"
             }
           }}
@@ -51,11 +60,14 @@ function ProfilePage() {
           style={{ background: '#9BB1FF' }}
         >
           <Toolbar />
+          <img src={BuildoutLogo} alt="BuildOut Logo" height='150px' width='200px'/>
           <List>
-            {["", "", "", "Home", "Schedule", "Workouts", "Exercises", "Settings"].map(
+            {["", "", "Home", "Schedule", "Workouts", "Exercises", "Settings"].map(
               (text, index) => (
                 <ListItem button key={text}>
+                  <ListItemIcon>
                   
+                  </ListItemIcon>
                   <ListItemText primary={text} />
                 </ListItem>
               )
@@ -96,6 +108,89 @@ function ProfilePage() {
                }}
               />
           </div>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '220px',
+            top: '60px',
+          }}>
+            <h3> Today</h3>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '220px',
+            top: '82px',
+          }}>
+            <h4> Saturday, April 16</h4>
+          </div>
+          
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '100px',
+            top: '100px',
+          }}>
+            <img src={userPhoto} alt="User Photo Logo" height='150px' width='150px'/>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '130px',
+            top: '250px',
+          }}>
+            <h3> Joe Bruin </h3>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '250px',
+            bottom: '40px',
+          }}>
+            <Box color="white" bgcolor="#9BB1FF" p={20} style={{borderRadius: '10px'}}>
+              Friend Activity
+            </Box>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '322px',
+            bottom: '40px',
+          }}>
+            <Box color="white" bgcolor="#9BB1FF" p={20} style={{borderRadius: '10px'}}>
+              Messages
+            </Box>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '250px',
+            top: '140px',
+          }}>
+            <Box color="white" bgcolor="white" p={5} style={{borderRadius: '10px', width: '500px', height: '210px'}}>
+              
+            </Box>
+          </div>
+
         </Box>
       </Box>
     );
