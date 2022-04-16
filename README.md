@@ -3,4 +3,5 @@
   <li>npm install react-router-dom</li>
   <li>npm install @mui/styles @material-ui/core</li>
   <li>npm install get-google-fonts</li>
+  <li>npm install react-multi-date-picker</li>
  </ul>
