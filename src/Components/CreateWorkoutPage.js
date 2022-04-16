@@ -1,6 +1,15 @@
 import OptionButton from './OptionButton.js';
-import Button from '@mui/material/Button';
+import NavButton from './NavButton.js';
+import Typography from '@mui/material/Typography';
+import theme from './Theme.js';
 import { useNavigate } from "react-router-dom";
+import { styled } from '@mui/material/styles';
+import './CreateWorkoutPage.css';
+
+const StyledTypography = styled(Typography)(() => ({
+    color: '#ffffff',
+    fontFamily: theme.typography.fontFamily,
+}));
 
 function CreateWorkoutPage() {
     let navigate = useNavigate();
@@ -10,42 +19,74 @@ function CreateWorkoutPage() {
     
     return (
       <div className="CreateWorkoutPage">
-          <div className="header">
-
-          </div>
-          <div className="selection-area">
-              <div className="button-col">
-                <div className="button-group">
-                    <Typography variant="h6">What do we want to work on?</Typography>
+            <div className="header">
+                <StyledTypography variant="h2" fontSize='40px' fontWeight='bold'>Hi Elaine,</StyledTypography>
+                <StyledTypography variant="h2" fontSize='40px'>Let's create the perfect workout for you today!</StyledTypography>
+            </div>
+            <div className="selection-area">
+                <div className="button-col">
+                    <StyledTypography variant="h6">What do we want to work on?</StyledTypography>
+                    <div className="button-group">
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                    </div>
+                    <div className="time-selection">
+                        Time Selection
+                    </div>
+                    <StyledTypography variant="h6">How difficult do we want it to be?</StyledTypography>
+                    <div className="button-group">
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                    </div>
                 </div>
-                <div className="time-selection">
-
+                <div className="button-col">
+                    <StyledTypography variant="h6">What equipments do we have?</StyledTypography>
+                    <div className="button-group">
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                    </div>
+                    <StyledTypography variant="h6">Include stretches?</StyledTypography>
+                    <div className="button-group">
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                        <OptionButton text="Option" />
+                    </div>
                 </div>
-                <div className="button-group">
-                    <Typography variant="h6">How difficult do we want it to be?</Typography>
+                <div className="nav-button-box">
+                    <NavButton 
+                        onClick={() => goToMyWorkoutsPage()}
+                        variant="outlined"
+                    >
+                        Go to My Workouts
+                    </NavButton>
                 </div>
-              </div>
-              <div className="button-col">
-                <div className="button-group">
-                    <Typography variant="h6">What equipments do we have?</Typography>
-                </div>
-                <div className="button-group">
-                    <Typography variant="h6">Include stretches?</Typography>
-                </div>
-              </div>
-
-          </div>
-          <div className="nav-button-box">
-
-          </div>
-          <h3>CreateWorkoutPage</h3>
-          <Button 
-            onClick={() => goToMyWorkoutsPage()}
-            variant="outlined"
-          >
-            Click me to go to MyWorkoutsPage
-          </Button>
-          <OptionButton text="Option" />
+            </div>
+          
       </div>
     );
   }

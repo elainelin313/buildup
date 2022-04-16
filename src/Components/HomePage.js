@@ -43,21 +43,19 @@ function HomePage() {
                   <br></br>
                   workout types and equipment
                 </p>
-                <div className="getstartedbutton">
-                  <a>
-                    Get started
-                  </a>
+                <div>
+                <NavButton 
+                    onClick={() => goToCreateWorkoutPage()}
+                    variant="outlined"
+                >
+                    Get Started
+                </NavButton>
                 </div>
             </div>
 
           </div>
 
-          <NavButton 
-            onClick={() => goToCreateWorkoutPage()}
-            variant="outlined"
-          >
-            Click me to go to CreateWorkoutPage
-          </NavButton>
+          
       </div>
     );
   }
