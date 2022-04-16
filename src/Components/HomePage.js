@@ -1,7 +1,21 @@
+import Button from '@mui/material/Button';
+import { useNavigate } from "react-router-dom";
+
 function HomePage() {
+    let navigate = useNavigate();
+    async function goToCreateWorkoutPage() {
+      navigate("/createworkoutpage");
+    }
+
     return (
-      <div className="Home">
-          <h3>Hello World!</h3>
+      <div className="HomePage">
+          <h3>HomePage</h3>
+          <Button 
+            onClick={() => goToCreateWorkoutPage()}
+            variant="outlined"
+          >
+            Click me to go to CreateWorkoutPage
+          </Button>
       </div>
     );
   }
