@@ -1,0 +1,61 @@
+
+
+.CreateWorkoutPage {
+    background-color: #9BB1FF;
+    height: 100vh;
+    padding: 5%;
+    padding-left: 7%;
+}
+
+.header {
+    /*background-color:violet;*/
+    padding-top: 10%;
+    height: 15%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+.selection-area {
+    /*background-color:honeydew;*/
+    height: 70%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button-col {
+    /*background-color:blanchedalmond;*/
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.time-selection {
+    /*background-color:azure;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.button-group {
+    /*background-color:mistyrose;*/
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-flow: wrap;
+    padding: 7px;  
+    gap: 8px;
+    align-content: flex-start;
+}
+
+.nav-button-box {
+    margin-top: 20%;
+    width: 15%;
+    /*background-color:goldenrod;*/
+    display: flex;
+    align-items: center;
+}
