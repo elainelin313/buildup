@@ -68,7 +68,58 @@ function ProfilePage() {
         >
           <Toolbar />
           <img src={BuildoutLogo} alt="BuildOut Logo" height='150px' width='200px'/>
-          <List>
+
+          <ListItem button>
+            <ListItemIcon>
+            </ListItemIcon>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+            </ListItemIcon>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+            </ListItemIcon>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <img src={home} alt="home" />
+            </ListItemIcon>
+            <StyledTypography> Home </StyledTypography>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <img src={schedule} alt="schedule" />
+            </ListItemIcon>
+            <StyledTypography> Schedule </StyledTypography>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <img src={Barbell} alt="barbell" />
+            </ListItemIcon>
+            <StyledTypography> Workouts </StyledTypography>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <img src={Exercise} alt="exercise" />
+            </ListItemIcon>
+            <StyledTypography> Exercises </StyledTypography>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemIcon>
+              <img src={settings} alt="settings" />
+            </ListItemIcon>
+            <StyledTypography> Settings </StyledTypography>
+          </ListItem>
+
+          {/* <List>
             {["", "", "Home", "Schedule", "Workouts", "Exercises", "Settings"].map(
               (text, index) => (
                 <ListItem button key={text}>
@@ -79,7 +130,7 @@ function ProfilePage() {
                 </ListItem>
               )
             )}
-          </List>
+          </List> */}
         </Drawer>
         <Box component="main" sx={{ flexGrow: 1, bgcolor: "#efefe", p: 3 }}>
           <Toolbar />
