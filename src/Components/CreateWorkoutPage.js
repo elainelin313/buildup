@@ -1,15 +1,8 @@
 import OptionButton from './OptionButton.js';
 import NavButton from './NavButton.js';
-import Typography from '@mui/material/Typography';
-import theme from './Theme.js';
 import { useNavigate } from "react-router-dom";
-import { styled } from '@mui/material/styles';
 import './CreateWorkoutPage.css';
-
-const StyledTypography = styled(Typography)(() => ({
-    color: '#ffffff',
-    fontFamily: theme.typography.fontFamily,
-}));
+import StyledTypography from './StyledTypography.js'
 
 function CreateWorkoutPage() {
     let navigate = useNavigate();
