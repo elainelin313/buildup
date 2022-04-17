@@ -28,6 +28,76 @@
   color: #61dafb;
 }
 
+.SignUpPage {
+  background-color: #BFD7FF;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.SignUpPage-Wrapper {
+  background-color: #788BFF;
+  min-width: 100px;
+  min-height: 100x;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  text-align: center
+
+}
+
+.SignUpTitle {
+  color: #282c34;
+  text-align: center;
+  margin: 80px 0px 40px 0px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.name,
+.birthday,
+.email,
+.password {
+  margin: 10px;
+  color: white;
+  font-size: 16px
+}
+
+.label {
+  font-size: 20px;
+  color: white
+}
+
+.input {
+  color: black;
+  width: 90%;
+  length: 70%;
+  padding: 5px 5px;
+  margin: 5px 0;
+  box-sizing: border-box
+}
+
+.submit {
+  display: inline-block;
+  background-color: #BFD7FF;
+  color: #282c34;
+  text-align: center;
+  padding: 5px 50px;
+  border-radius: 40px
+}
+
+.SpotifyButton {
+  background-color: #1DB954;
+  padding: 10px 120px;
+  margin: 40px;
+  border-radius: 40px;
+  color: white
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

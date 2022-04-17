@@ -5,6 +5,7 @@ import CreateWorkoutPage from './Components/CreateWorkoutPage.js';
 import MyWorkoutsPage from './Components/MyWorkoutsPage.js';
 import ActiveWorkoutPage from './Components/ActiveWorkoutPage.js';
 import ProfilePage from './Components/ProfilePage.js';
+import SignUpPage from './Components/SignUp.js';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/myworkoutspage' element={<MyWorkoutsPage />} />
         <Route path='/activeworkoutpage' element={<ActiveWorkoutPage />} />
         <Route path='/profilepage' element={<ProfilePage />} />
+        <Route path='/signuppage' element={<SignUpPage />} />
       </Routes>
     </div>
   );

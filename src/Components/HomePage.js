@@ -6,6 +6,9 @@ function HomePage() {
     async function goToCreateWorkoutPage() {
       navigate("/createworkoutpage");
     }
+    async function goToSignUpPage() {
+      navigate("/signuppage");
+    }
 
     return (
       <div className="HomePage">
@@ -15,6 +18,12 @@ function HomePage() {
             variant="outlined"
           >
             Click me to go to CreateWorkoutPage
+          </Button>
+          <Button 
+            onClick={() => goToSignUpPage()}
+            variant="outlined"
+          >
+            Click me to go to Sign Up Page
           </Button>
       </div>
     );
