@@ -20,8 +20,12 @@ import home from '../home.svg';
 import schedule from '../schedule.svg';
 import settings from '../settings.svg';
 import ListItemIcon from "@mui/material/ListItemIcon";
+import theme from './Theme.js';
+import { styled } from '@mui/material/styles';
 
-
+const StyledTypography = styled(Typography)(() => ({
+  fontFamily: theme.typography.fontFamily,
+}));
 
 function ProfilePage() {
     let navigate = useNavigate();
@@ -35,17 +39,19 @@ function ProfilePage() {
     return (
       <Box sx={{ backgroundColor: '#efefff', display: "flex", height: '100vh'}}>
         <CssBaseline />
+        
         <AppBar
           position="fixed"
           sx={{ width: `calc(100% - 200px)`, ml: `100vh`}}
           style={{ background: '#9BB1FF' }}
         >
           <Toolbar>
-            <Typography variant="h3" noWrap component="div">
+            <StyledTypography variant="h3" noWrap component="div">
               Welcome Back!
-            </Typography>
+            </StyledTypography>
           </Toolbar>
         </AppBar>
+
         <Drawer
           sx={{
             width: '200px',
@@ -82,10 +88,10 @@ function ProfilePage() {
             alignItems: 'left',
             justifyContent: 'left',
             position: 'fixed',
-            right: '65px',
-            bottom: '300px',
+            right: '54px',
+            bottom: '310px',
           }}>
-            <h3> Your month in workouts </h3>
+            <StyledTypography variant="h6"> Your month in workouts </StyledTypography>
           </div>
           <div style={{
             display: 'flex',
@@ -113,10 +119,10 @@ function ProfilePage() {
             alignItems: 'center',
             justifyContent: 'center',
             position: 'fixed',
-            left: '220px',
-            top: '60px',
+            left: '218px',
+            top: '73px',
           }}>
-            <h3> Today</h3>
+            <StyledTypography variant="h5"> Today</StyledTypography>
           </div>
 
           <div style={{
@@ -125,9 +131,9 @@ function ProfilePage() {
             justifyContent: 'center',
             position: 'fixed',
             left: '220px',
-            top: '82px',
+            top: '100px',
           }}>
-            <h4> Saturday, April 16</h4>
+            <StyledTypography variant="h6"> Saturday, April 16</StyledTypography>
           </div>
           
           <div style={{
@@ -146,10 +152,10 @@ function ProfilePage() {
             alignItems: 'center',
             justifyContent: 'center',
             position: 'fixed',
-            right: '130px',
-            top: '250px',
+            right: '123px',
+            top: '255px',
           }}>
-            <h3> Joe Bruin </h3>
+            <StyledTypography variant="h5"> Joe Bruin </StyledTypography>
           </div>
 
           <div style={{
@@ -160,8 +166,8 @@ function ProfilePage() {
             left: '250px',
             bottom: '40px',
           }}>
-            <Box color="white" bgcolor="#9BB1FF" p={20} style={{borderRadius: '10px'}}>
-              Friend Activity
+            <Box color="white" bgcolor="#9BB1FF" p={2} style={{borderRadius: '10px', width: '400px', height: '345px'}}>
+              <StyledTypography variant="h6"> Friend Activity</StyledTypography>
             </Box>
           </div>
 
@@ -173,8 +179,8 @@ function ProfilePage() {
             right: '322px',
             bottom: '40px',
           }}>
-            <Box color="white" bgcolor="#9BB1FF" p={20} style={{borderRadius: '10px'}}>
-              Messages
+            <Box color="white" bgcolor="#9BB1FF" p={2} style={{borderRadius: '10px', width: '420px', height: '345px'}}>
+              <StyledTypography variant="h6"> Messages </StyledTypography>
             </Box>
           </div>
 
@@ -186,9 +192,232 @@ function ProfilePage() {
             left: '250px',
             top: '140px',
           }}>
-            <Box color="white" bgcolor="white" p={5} style={{borderRadius: '10px', width: '500px', height: '210px'}}>
-              
+            <Box color="black" bgcolor="white" p={2} style={{borderRadius: '10px', width: '500px', height: '210px'}}>
+              <StyledTypography variant="h6"> Exercise Activity </StyledTypography>
             </Box>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '123px',
+            top: '300px',
+          }}>
+            <Box color="white" bgcolor="#9BB1FF" p={1.15} style={{borderRadius: '10px', width: '101px', height: '40px'}}>
+              <StyledTypography> Edit Profile </StyledTypography>
+            </Box>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '267px',
+            top: '185px',
+          }}>
+              <StyledTypography variant="h7" color="#808080"> avg: 33 min/day </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '280px',
+            bottom: '270px',
+          }}>
+            <img src={userPhoto} alt="User Photo Logo" height='50px' width='50px'/>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '280px',
+            bottom: '175px',
+          }}>
+            <img src={userPhoto} alt="User Photo Logo" height='50px' width='50px'/>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '280px',
+            bottom: '85px',
+          }}>
+            <img src={userPhoto} alt="User Photo Logo" height='50px' width='50px'/>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '340px',
+            bottom: '290px',
+          }}>
+            <StyledTypography variant="h6"> Isabelle Choi </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '340px',
+            bottom: '270px',
+          }}>
+            <StyledTypography variant="h7"> 45 minute cardio </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '340px',
+            bottom: '195px',
+          }}>
+            <StyledTypography variant="h6"> Elaine Lin </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '340px',
+            bottom: '175px',
+          }}>
+            <StyledTypography variant="h7"> Elaine's ab workout </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '340px',
+            bottom: '105px',
+          }}>
+            <StyledTypography variant="h6"> Joyce Jeon </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '340px',
+            bottom: '85px',
+          }}>
+            <StyledTypography variant="h7"> 15 min full body </StyledTypography>
+          </div>
+
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '660px',
+            bottom: '270px',
+          }}>
+            <img src={userPhoto} alt="User Photo Logo" height='50px' width='50px'/>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '660px',
+            bottom: '175px',
+          }}>
+            <img src={userPhoto} alt="User Photo Logo" height='50px' width='50px'/>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '660px',
+            bottom: '85px',
+          }}>
+            <img src={userPhoto} alt="User Photo Logo" height='50px' width='50px'/>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '527px',
+            bottom: '290px',
+          }}>
+            <StyledTypography variant="h6"> Kaylyn Phan </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '478px',
+            bottom: '270px',
+          }}>
+            <StyledTypography variant="h7"> Great workout today! </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '518px',
+            bottom: '195px',
+          }}>
+            <StyledTypography variant="h6"> Isabelle Choi </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '390px',
+            bottom: '175px',
+          }}>
+            <StyledTypography variant="h7"> Good luck on your next workout! </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '535px',
+            bottom: '105px',
+          }}>
+            <StyledTypography variant="h6"> Joyce Jeon </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            right: '470px',
+            bottom: '85px',
+          }}>
+            <StyledTypography variant="h7"> Have fun on your run!! </StyledTypography>
           </div>
 
         </Box>
