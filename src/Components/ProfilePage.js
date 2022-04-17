@@ -22,6 +22,7 @@ import settings from '../settings.svg';
 import ListItemIcon from "@mui/material/ListItemIcon";
 import theme from './Theme.js';
 import { styled } from '@mui/material/styles';
+import ExerciseMinutes from '../ExerciseMinutes.svg';
 
 const StyledTypography = styled(Typography)(() => ({
   fontFamily: theme.typography.fontFamily,
@@ -192,7 +193,7 @@ function ProfilePage() {
             left: '250px',
             top: '140px',
           }}>
-            <Box color="black" bgcolor="white" p={2} style={{borderRadius: '10px', width: '500px', height: '210px'}}>
+            <Box color="black" bgcolor="white" p={1.25} style={{borderRadius: '10px', width: '500px', height: '210px'}}>
               <StyledTypography variant="h6"> Exercise Activity </StyledTypography>
             </Box>
           </div>
@@ -215,8 +216,8 @@ function ProfilePage() {
             alignItems: 'center',
             justifyContent: 'center',
             position: 'fixed',
-            left: '267px',
-            top: '185px',
+            left: '261px',
+            top: '175px',
           }}>
               <StyledTypography variant="h7" color="#808080"> avg: 33 min/day </StyledTypography>
           </div>
@@ -418,6 +419,109 @@ function ProfilePage() {
             bottom: '85px',
           }}>
             <StyledTypography variant="h7"> Have fun on your run!! </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '315px',
+            top: '95px',
+          }}>
+            <img src={ExerciseMinutes} alt="Exercise Minutes" height='320px' width='360px'/>
+          </div>
+
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '318px',
+            top: '315px',
+          }}>
+            <StyledTypography variant="h7" fontWeight="bold"> S </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '366px',
+            top: '315px',
+          }}>
+            <StyledTypography variant="h7" fontWeight="bold"> M </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '428px',
+            top: '315px',
+          }}>
+            <StyledTypography variant="h7" fontWeight="bold"> T </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '492px',
+            top: '315px',
+          }}>
+            <StyledTypography variant="h7" fontWeight="bold"> W </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '558px',
+            top: '315px',
+          }}>
+            <StyledTypography variant="h7" fontWeight="bold"> T </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '608px',
+            top: '315px',
+          }}>
+            <StyledTypography variant="h7" fontWeight="bold"> F </StyledTypography>
+          </div>
+
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '662px',
+            top: '315px',
+          }}>
+            <StyledTypography variant="h7" fontWeight="bold"> S </StyledTypography>
+          </div>
+
+          <div height="110" width="500" position 
+          style={{ 
+            display: 'flex', 
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'fixed',
+            left: '655px',
+            top: '315px',
+            }}>
+
+            <Box color="white" bgcolor="#5465FF" p={1.15} style={{borderRadius: '12px', width: '24px', height: '24px', opacity: '0.5'}}>
+            </Box>
           </div>
 
         </Box>
