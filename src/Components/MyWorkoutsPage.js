@@ -2,15 +2,26 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import { useNavigate } from "react-router-dom";
+import { styled } from '@mui/material/styles';
+import theme from './Theme.js';
+import NavButton from './NavButton.js';
+import './MyWorkoutsPage.css';
 
-function PoseCard() {
+const PoseCard = styled(Button)(() => ({
+    width: 100,
+    height: 100,
+    justifyContent: 'center',
+    backgroundColor: theme.palette.background.paper,
+    borderColor: '#ffffff',
+    '&:hover': {
+        borderColor: '#eeeeee',
+    },
+    borderRadius: theme.overrides.MuiButton.root.borderRadius,
+}));
+
+function CuratedWorkoutCard() {
     return (
-        <Card sx={{ width: 200, height: 200 }}>
-            <h6>Card</h6>
-            <CardMedia>
-                {/*Here you would put the image of the workout*/}
-            </CardMedia>
-        </Card>
+        <div></div>
     );
 }
 
@@ -23,16 +34,58 @@ function MyWorkoutsPage() {
     return (
       <div className="MyWorkoutsPage">
           <h3>MyWorkoutsPage</h3>
-          <Button 
-            onClick={() => goToActiveWorkoutPage()}
-            variant="outlined"
-          >
-            Click me to go to ActiveWorkoutPage
-          </Button>
-          <div>
-              <PoseCard />
-              <PoseCard />
-              <PoseCard />
+          <div className="column">
+            <div className="multi-select-options">
+                options
+            </div>
+            <div className="scroll">
+                <div class="trio">
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                </div>
+                <div className="trio">
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                </div>
+                <div className="trio">
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                </div>
+                <div className="trio">
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                </div>
+                <div className="trio">
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                </div>
+                <div className="trio">
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                    <PoseCard>test</PoseCard>
+                </div>
+            </div>
+            <NavButton
+                onClick={() => goToActiveWorkoutPage()}
+                variant="outlined"
+            >
+                Click me to go to Active Workout Page
+            </NavButton>
+          </div>
+          <div className="column">
+              <div className="header">
+
+              </div>
+              <div className="scroll">
+                  <CuratedWorkoutCard />
+                  <CuratedWorkoutCard />
+                  <CuratedWorkoutCard />
+              </div>
           </div>
       </div>
     );
