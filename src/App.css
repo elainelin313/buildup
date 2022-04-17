@@ -27,7 +27,6 @@
   color: #61dafb;
 }
 
-<<<<<<< HEAD
 .Active {
   display:flex;
   flex-direction: column;
@@ -87,7 +86,8 @@
   margin-left: 3rem;
   border-radius: 80px;
   margin-top: 1rem;
-=======
+}
+
 .Home {
   background-color: #BFCDFF;
   height: 100vh;
@@ -180,7 +180,6 @@
   color: #BFCDFF;
   font-size: 2rem;
   margin-bottom: 0.75rem;
->>>>>>> 7bb24c877c8a0a2b168d12f97ccb346cc3ec0511
 }
 
 @keyframes App-logo-spin {
