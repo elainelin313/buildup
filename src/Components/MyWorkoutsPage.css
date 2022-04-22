@@ -1,0 +1,77 @@
+:root {
+  --gutter: 10px;
+}
+
+.gallery {
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.gallery > * {
+  grid-column: 2 / -2;
+}
+
+.gallery > .full {
+  grid-column: 1 / -1;
+}
+
+.scroll {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: 10px repeat(var(--total), calc(50% - var(--gutter) * 2)) 10px;
+  grid-template-rows: minmax(150px, 1fr);
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+.scroll:after {
+  content: '';
+}
+
+
+/* Demo styles */
+
+body {
+  background: #456173;
+}
+
+.MyWorkoutsPage {
+    height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.gallery {
+  width: 600px;
+  height: 500px;
+  background: #DBD0BC;
+  overflow-y: scroll;
+}
+
+.scroll > li,
+.trio {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.multi-select-options {
+    display: flex;
+    flex-direction: row;
+}
